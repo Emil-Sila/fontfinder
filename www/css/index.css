@@ -21,49 +21,67 @@
     box-sizing: border-box;
 }
 
-body {
-    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    font-family: Arial, Helvetica; 
-    background-color: #e0e0e0;
-    height:100%;
-    margin:0px;
-    padding:0px;
-    width:100%;
+@font-face {
+    font-family: 'Raleway-Bold';
+    src: url('../fonts/Raleway-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Slabo27px-Regular';
+    src: url('../fonts/Slabo27px-Regular.ttf') format('truetype');
 }
 
-button { border: 1px solid #999; color: #555; background-color: #F4F4FA; padding: 0 10px; }
-button:hover { background-color: white; }
-input[type=text], input:not([type]) { padding: 0 10px; text-overflow: ellipsis; }
+/*html { overflow-y: hidden; }*/
 
-/* Main page structure and masthead style */
-#wrapper { max-width: 800px; margin: auto; padding: 30px 10px 10px 10px; }
-article { background-color: white; box-shadow: 0 0 12px rgba(0, 0, 0, 0.75); border-radius: 10px; }
-header { background-color: #71BCFA; padding: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; }
-header h1 { text-transform: uppercase; font-weight: normal; color: #545353; font-size: 20px; margin: 4px }
-header h2 { text-transform: uppercase; font-weight: normal; color: white; font-size: 14px; margin: 4px }
-#summary { text-align: center; padding: 8px 0; }
+body {
+    -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+    -webkit-user-select: text; /* prevent copy paste, to allow, change 'none' to 'text' */
+    font-family: Arial, Helvetica;
+    background-image: url('../img/bgv3.png');
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    font-family:Raleway-Bold;
+    text-align: justify;
+    color: rgb(0, 0, 0);
+}
 
-/* "Add new" form */
-#add-item { height: 26px; margin: 8px 0 5px 0; font-size: 1em }
-#add-item div { overflow: hidden; }
-#add-item button { float: right; margin-left: 10px; padding: 0 10px; height: 100%; border-radius: 4px; }
-#new-item-text { width: 100%; height: 26px; border: 1px solid #999; font-size: 1em; border-radius: 4px; }
+.res-img {
+    -webkit-box-shadow: 0px 0px 30px 6px rgba(255,255,255,0.5);
+    -moz-box-shadow: 0px 0px 30px 6px rgba(255,255,255,0.5);
+    box-shadow: 0px 0px 30px 6px rgba(255,255,255,0.5);
+    width:250px;
+}
+
+/* Title */
+
+#logo { float: left; margin:5px; }
+#title { float: right; font-size:2em; color:#57666B; font-family:Slabo27px-Regular; margin-right:1px; margin-top:38px;}
+#description { text-align:center; }
+ 
+/* Sections */
+
+#header { min-height:150px; }
+.section { background-color: rgba(212, 198, 207, 0.70); margin:10px; padding:20px; border-radius:5px; }
+.result { background-color: rgba(157, 183, 184, 0.90); padding: 30px; margin:auto; margin-left: -40px; margin-bottom:10px; list-style-type:none;}
+
+/* Main page */
+
+button { border: none; background-color: rgb(0, 0, 0); padding: 10px; min-width:45%; color:rgb(245, 226, 226); font-weight:bold}
+.center { text-align:center; margin:auto; }
+#take-picture { float:right; }
 
 /* List of items */
-#todo-items { padding: 8px; margin: 0px;}
-#todo-items li { list-style-type: none; height: 36px; padding: 0px; border-bottom: 1px solid #dadada;  }
-.item-complete { float: left; margin: 0px; height: 100%; }
-.item-delete { float: right; margin: 5px; height: 26px; }
+
+/*#font-items li { list-style-type: none; border-bottom: 1px solid rgb(0, 0, 0)  }*/
 
 /* Textboxes in list of items */
-#todo-items li div { overflow: hidden; padding: 5px 2px; }
-.item-text { width: 100%; height: 26px; line-height: 24px; border: 1px solid transparent; background-color: transparent; }
+
 .item-text:focus, .item-text:hover { border-color: #aaa; background-color: #FFC; }
 
 /* Footer */
 footer { text-align: center; font-size: 0.8em; margin-top: 20px; }
 footer a { color: #666; display: block; }
-#errorlog { color: red; font-weight: bold; padding: 8px; display: inline-block; text-align: left; }
+#errorlog { color: red; font-weight: bold; padding: 8px; display: inline-block; text-align: left; margin-left: 10px;}
 

@@ -7,24 +7,30 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-whitelist": {
+        "cordova-plugin-camera": {
             "PACKAGE_NAME": "com.microsoft.azure.mobileapps.fontfinder"
         },
         "cordova-plugin-ms-azure-mobile-apps": {
             "PACKAGE_NAME": "com.microsoft.azure.mobileapps.fontfinder"
         },
-        "cordova-plugin-camera": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.microsoft.azure.mobileapps.fontfinder"
+        },
+        "cordova-plugin-media-capture": {
             "PACKAGE_NAME": "com.microsoft.azure.mobileapps.fontfinder"
         }
     },
     "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.microsoft.azure.mobileapps.fontfinder"
+        },
         "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "com.microsoft.azure.mobileapps.fontfinder"
         },
         "cordova-sqlite-storage": {
             "PACKAGE_NAME": "com.microsoft.azure.mobileapps.fontfinder"
         },
-        "cordova-plugin-compat": {
+        "cordova-plugin-file": {
             "PACKAGE_NAME": "com.microsoft.azure.mobileapps.fontfinder"
         }
     }

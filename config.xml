@@ -2,9 +2,7 @@
 <widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="com.microsoft.azure.mobileapps.fontfinder" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US">
   <name>fontfinder</name>
   <description>fontfinder</description>
-  <author email="mobileservices@microsoft.com" href="http://www.windowsazure.com/en-us/develop/mobile/">
-        Azure Mobile Apps
-    </author>
+  <author email="mobileservices@microsoft.com" href="http://www.windowsazure.com/en-us/develop/mobile/">Emil Silađi</author>
   <content src="index.html" />
   <access origin="*" />
   <vs:features />
@@ -26,10 +24,20 @@
     <allow-intent href="itms-apps:*" />
   </platform>
   <platform name="android">
-    <icon src="res/icons/android/icon-36-ldpi.png" density="ldpi" />
-    <icon src="res/icons/android/icon-48-mdpi.png" density="mdpi" />
-    <icon src="res/icons/android/icon-72-hdpi.png" density="hdpi" />
-    <icon src="res/icons/android/icon-96-xhdpi.png" density="xhdpi" />
+    <!--
+            ldpi    : 36x36 px
+            mdpi    : 48x48 px
+            hdpi    : 72x72 px
+            xhdpi   : 96x96 px
+            xxhdpi  : 144x144 px
+            xxxhdpi : 192x192 px
+        -->
+    <icon src="res/icons/android/fontfinder-36-ldpi.png" density="ldpi" />
+    <icon src="res/icons/android/fontfinder-48-mdpi.png" density="mdpi" />
+    <icon src="res/icons/android/fontfinder-72-hdpi.png" density="hdpi" />
+    <icon src="res/icons/android/fontfinder-96-xhdpi.png" density="xhdpi" />
+    <icon src="res/icons/android/fontfinder-144-xxhdpi.png" density="xxhdpi" />
+    <icon src="res/icons/android/fontfinder-192-xxxhdpi.png" density="xxxhdpi" />
   </platform>
   <platform name="ios">
     <!-- iOS 8.0+ -->
@@ -110,4 +118,7 @@
   <plugin name="cordova-plugin-inappbrowser" version="1.4.0" />
   <plugin name="cordova-sqlite-storage" version="1.4.7" />
   <plugin name="cordova-plugin-camera" version="2.2.0" />
+  <plugin name="cordova-plugin-compat" version="1.0.0" />
+  <plugin name="cordova-plugin-media-capture" version="1.3.0" />
+  <plugin name="cordova-plugin-file" version="4.2.0" />
 </widget>

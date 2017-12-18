@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--
     Licensed to the Apache Software Foundation (ASF) under one
     or more contributor license agreements.  See the NOTICE file
@@ -20,34 +20,106 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://fontfinder.azurewebsites.net; style-src 'self'; media-src *">
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://fontfinder.azurewebsites.net; style-src 'self'; media-src *">-->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:">
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="width=device-width, user-scalable=no" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Todo list: fontfinder</title>
+        <link href="css/drop.css" rel="stylesheet" />
+        <title>Font Finder</title>
     </head>
     <body>
-        <div id='wrapper'>
-            <article>
-                <header>
-                    <h2>Azure</h2>
-                    <h1>Mobile Apps</h1>
+        <div>
+            <header>
+                <div class='section' id="header">
+                    <img src="img/fontfinder-144-xxhdpi.png" width="100" height="100" id='logo' />
+                    <h1 id='title'>FONT FINDER</h1><br />              
+                </div>
+                <div class="section">
+                    <p id="description">
+                        Font Finder is an app meant to help you find the font from an image. Choose one of the options below to get started.
+                    </p>
+                </div>
+            </header>
 
-                    <form id='add-item'>
-                        <button type='submit' id='refresh'>Refresh</button>
-                        <button type='submit'>Add</button>
-                        <div><input type='text' id='new-item-text' placeholder='Enter new task' /></div>
-                    </form>
-                </header>
+            <div class="section">
+                <button type='submit' id='select-picture'>Select Picture</button>
+                <button type='submit' id='take-picture'>Take Picture</button>
+            </div>
+            
+            <div class="section">
+                <div class="center">
+                    <button type='submit' id='refresh'>Refresh</button>
+                    <p id='summary'></p>
+                    <ul id='errorlog'></ul>
+                </div>
 
-                <ul id='todo-items'></ul>
-                <p id='summary'>Initializing...</p>
-            </article>
+                <ul id='font-items'>
+
+                    <!--
+                    <li class="result" id="data-fontitem-id">
+                        <div class="center">
+                            <img src="img/Inconsolata1.jpg" class="res-img" />
+                        </div>
+                        <p>Detected glyphs: The spectacle before us was indeed sublime</p>
+                        <p>No. glphs: 42</p>
+
+                        <div class="center">
+                            <div class="dropdown">
+                                <button class="dropbtn" id="dropdown">Show fonts</button>
+                                <ol id="myDropdown" class="dropdown-content">
+                                    <li> Lora: 41 </li>
+                                    <li> Montserrat: 35.3</li>
+                                    <li> Slabo_27px: 26.8</li>
+                                    <li> Roboto: 22.1</li>
+                                    <li> Source_Sans_Pro: 16.3</li>
+                                    <li> Open_Sans: 13.7</li>
+                                    <li> Roboto_Condensed: 11</li>
+                                    <li> Inconsolata: 9.5</li>
+                                    <li> Oswald: 8.9</li>
+                                    <li> Raleway: 4.7</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                    </li>
+
+                    <li class="result" id="data-fontitem-id">
+                        <div class="center">
+                            <img src="img/Lora4.jpg" class="res-img" />
+                        </div>
+                        <p>Detected glyphs: The spectacle before us was indeed sublime</p>
+                        <p>No. glphs: 42</p>
+
+                        <div class="center">
+                            <div class="dropdown">
+                                <button class="dropbtn" id="dropdown">Show fonts</button>
+                                <ol id="myDropdown" class="dropdown-content">
+                                    <li> Lora: 41 </li>
+                                    <li> Montserrat: 35.3</li>
+                                    <li> Slabo_27px: 26.8</li>
+                                    <li> Roboto: 22.1</li>
+                                    <li> Source_Sans_Pro: 16.3</li>
+                                    <li> Open_Sans: 13.7</li>
+                                    <li> Roboto_Condensed: 11</li>
+                                    <li> Inconsolata: 9.5</li>
+                                    <li> Oswald: 8.9</li>
+                                    <li> Raleway: 4.7</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                    </li>
+                    -->
+
+                </ul>
+            </div>           
+
+        </div>
 
             <footer>
-                <ul id='errorlog'></ul>
+                
             </footer>
-        </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
